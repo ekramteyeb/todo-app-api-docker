@@ -1,32 +1,31 @@
 <h1>Todo-app-api : Dockerized</h1>
-                <ul>
-                    <h4>In order to run the app at  dockor daemon as docker container  </h4>
-                    <li>run sail up -d </li>
+                
+<ul>
+     <h4>In order to run the app at  dockor daemon as docker container  </h4>
+    <li>run sail up -d </li>
                     this will create an image and run a  container out of that image.
-                    <p>list available containers with </p>
+    <p>list available containers with </p>
                     - docker ps -a
-                    <p>
+    <p>
                     copy the current container and dive into its environment</p>
                     - docker exec -it containername 
-                    <p> refresh the database schema. Rollback all migrations and run them all again </p>
+    <p> refresh the database schema. Rollback all migrations and run them all again </p>
                     - php artisan migrate:refresh
-                    
-                    <p>Now the application is running and the database is ready</p>
-                    
-                    <h4>Visit these end points to access the resources</h4>
-                    <p>user login required. Postman is an easy to use tool for this.</p>
-                    <li>POST http://0.0.0.0:80/api/v1/register </li> 
-                        - name , email, password , confirm_password fields are needed.
-                        - if successful , server responds with token 
-                    <li>POST http://0.0.0.0:80/api/v1/login</li>
-                        - login with creadential(email, password) , server response is token 
-                        - 
-
-                    <li>GET http://0.0.0.0:80/api/v1/todos -get all todos </li>
-                    <li>POST http://0.0.0.0:80/api/v1/todos -push a todo ;  name , description fields are required </li>
-                    <li>PUT http://0.0.0.0:80/api/v1/todos/id</li> - modifies a specific todo by the author(only author)
-                    <li>DELET http://0.0.0.0:80/api/v1/id</li> - Deletes a specific todo by its author.
-                </ul>
+    <div>
+     <p>Now the application is running and the database is ready</p>     
+    <h4>Visit these end points to access the resources</h4>
+    <p>user login required. Postman is an easy to use tool for this.</p>
+    <li>POST http://0.0.0.0:80/api/v1/register </li> 
+        - name , email, password , confirm_password fields are needed.
+        - if successful , server responds with token 
+    <li>POST http://0.0.0.0:80/api/v1/login</li>
+        - login with creadential(email, password) , server response is token 
+        <li>GET http://0.0.0.0:80/api/v1/todos -get all todos </li>
+        <li>POST http://0.0.0.0:80/api/v1/todos -push a todo ;  name , description fields are required </li>
+        <li>PUT http://0.0.0.0:80/api/v1/todos/id</li> - modifies a specific todo by the author(only author)
+        <li>DELET http://0.0.0.0:80/api/v1/id</li> - Deletes a specific todo by its author.
+    </ul>
+               
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
