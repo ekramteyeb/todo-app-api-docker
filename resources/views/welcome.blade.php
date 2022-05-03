@@ -40,9 +40,32 @@
                 
                 <h1>Todo-app-api : Dockerized</h1>
                 <ul>
-                    <h4>Visit these end points to the resource</h4>
+                    <h4>In order to run the app at  dockor daemon as docker container  </h4>
+                    <li>run sail up -d </li>
+                    this will create an image and run a  container out of that image.
+                    <p>list available containers with </p>
+                    - docker ps -a
+                    <p>
+                    copy the current container and dive into its environment</p>
+                    - docker exec -it containername 
+                    <p> refresh the database schema. Rollback all migrations and run them all again </p>
+                    - php artisan migrate:refresh
+                    
+                    <p>Now the application is running and the database is ready</p>
+                    
+                    <h4>Visit these end points to access the resources</h4>
                     <p>user login required. Postman is an easy to use tool for this.</p>
-                    <li>http://0.0.0.0:80/api/v1/register </li> 
+                    <li>POST http://0.0.0.0:80/api/v1/register </li> 
+                        - name , email, password , confirm_password fields are needed.
+                        - if successful , server responds with token 
+                    <li>POST http://0.0.0.0:80/api/v1/login</li>
+                        - login with creadential(email, password) , server response is token 
+                        - 
+
+                    <li>GET http://0.0.0.0:80/api/v1/todos -get all todos </li>
+                    <li>POST http://0.0.0.0:80/api/v1/todos -push a todo ;  name , description fields are required </li>
+                    <li>PUT http://0.0.0.0:80/api/v1/todos/id</li> - modifies a specific todo by the author(only author)
+                    <li>DELET http://0.0.0.0:80/api/v1/id</li> - Deletes a specific todo by its author.
                 </ul>
                 
             </div>
